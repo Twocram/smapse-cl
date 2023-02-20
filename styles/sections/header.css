@@ -1,0 +1,19 @@
+#header {
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #252B42;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=header.css.map */

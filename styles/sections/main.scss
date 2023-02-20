@@ -1,0 +1,161 @@
+#main {
+  position: relative;
+}
+
+.green-bg {
+  position: absolute;
+  z-index: -1;
+}
+
+.blue-bg {
+  z-index: -1;
+  right: 0;
+  top: -95px;
+  position: absolute;
+}
+
+.hero-section {
+  padding-top: 80px;
+  position: relative;
+  display: flex;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-weight: 700;
+      color: $primary-color;
+      @include h5-text;
+    }
+
+    &-caption {
+      font-weight: 700;
+      max-width: 542px;
+      margin: 35px 0;
+      text-transform: uppercase;
+      color: $text-color;
+      @include h1-text;
+    }
+
+    &-desc {
+      max-width: 450px;
+      color: $second-text-color;
+      @include h4-text;
+      margin-bottom: 35px;
+    }
+
+    .hero-btns {
+      display: flex;
+
+      &__get {
+        font-weight: 700;
+        background-color: $primary-color;
+        padding: 15px 40px;
+        color: #ffffff;
+        @include btn-text;
+        border-radius: 5px;
+        margin-right: 10px;
+
+        &:hover {
+          background-color: #809b67;
+          border-radius: 10px;
+          transition: 0.15s ease-in-out;
+        }
+      }
+
+      &__learn {
+        font-weight: 700;
+        border: 1px solid $primary-color;
+        padding: 15px 40px;
+        color: $primary-color;
+        @include btn-text;
+        border-radius: 5px;
+
+        &:hover {
+          color: $light-bg-color;
+          background-color: $primary-color;
+          transition: 0.15s ease-in-out;
+          border-radius: 10px;
+        }
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  &__image {
+    &-girl {
+      z-index: 3;
+      position: absolute;
+      right: -110px;
+      top: -30px;
+    }
+
+    .grey-vector {
+      position: absolute;
+      right: -40px;
+      top: 90px;
+    }
+
+    .border-vector {
+      position: absolute;
+      right: -10px;
+      top: 110px;
+      z-index: 2;
+    }
+
+    @keyframes white-animation {
+      from {
+        right: 60px;
+      }
+
+      to {
+        right: 70px;
+      }
+    }
+
+    .white-vector {
+      position: absolute;
+      right: 70px;
+      top: 40px;
+      animation: white-animation 0.6s infinite alternate;
+    }
+
+    @keyframes red-animation {
+      from {
+        bottom: 30px;
+      }
+
+      to {
+        bottom: 40px;
+      }
+    }
+
+    .red-vector {
+      position: absolute;
+      bottom: 40px;
+      z-index: 2;
+      animation: red-animation 0.6s infinite alternate;
+    }
+
+    @keyframes blue-animation {
+      from {
+        bottom: 30px;
+      }
+
+      to {
+        bottom: 40px;
+      }
+    }
+    .blue-vector {
+      position: absolute;
+      right: -30px;
+      bottom: 40px;
+      z-index: 3;
+      animation: blue-animation 0.6s infinite alternate;
+    }
+  }
+}

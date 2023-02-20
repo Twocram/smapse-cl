@@ -1,0 +1,81 @@
+#header {
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  color: $text-color;
+  @include h3-text;
+  font-weight: bold;
+  margin-right: 83px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin-right: 240px;
+  &__link {
+    @include h6-text;
+    color: $second-text-color;
+
+    &:hover {
+      color: $text-color;
+      transition: 0.15s ease-in;
+    }
+  }
+  &__item {
+    font-weight: 700;
+    margin-right: 21px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+
+  &__login {
+    font-weight: 700;
+    @include btn-text;
+    color: $primary-color;
+    margin-right: 45px;
+  }
+
+  &__join {
+    @include btn-text;
+    font-weight: 700;
+    padding: 15px 25px;
+    background-color: $primary-color;
+    color: #ffffff;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #809b67;
+      border-radius: 10px;
+      transition: 0.15s ease-in-out;
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+
+      .svg-arrow {
+        width: 12px;
+        height: 10px;
+        display: flex;
+      }
+
+      &__text {
+        margin-right: 15px;
+      }
+    }
+  }
+}
